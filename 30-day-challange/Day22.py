@@ -70,6 +70,11 @@ class BST():
         return root
 
     def getHeight(self,root):
+        if root is None:
+            return -1
+        lH = self.getHeight(root.left)
+        rH = self.getHeight(root.right)
+        return max(lH, rH) + 1
 
 
 T=int(raw_input())
